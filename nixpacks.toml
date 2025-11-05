@@ -1,0 +1,21 @@
+[phases.setup]
+nixPkgs = ["nodejs_20", "bash"]
+
+[phases.install]
+cmds = [
+  # manually upgrade Node to the latest 20.x build before installing dependencies
+  "curl -fsSL https://deb.nodesource.com/setup_20.x | bash -",
+  "apt-get install -y nodejs",
+  "node -v",
+  "npm install"
+]
+
+[phases.build]
+cmds = [
+  "npm install --prefix backend",
+  "npm install --prefix frontend",
+  "npm run build --prefix frontend"
+]
+
+[start]
+cmd = "npm run start --prefix backend"
