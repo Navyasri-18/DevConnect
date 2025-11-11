@@ -88,7 +88,7 @@ function HomePage() {
 
           { /*Right Section*/}
           <img src="/Hero.png" alt="Code Collab PLatform"
-            className="w-full h-auto rounded-3xl shadow-2xl border-4 border-base-100 transform hover:scale-105 transition-transform duration-500 will-change-transform" />
+            className="w-full h-auto rounded-2xl shadow-2xl border-2 border-base-200 transform hover:scale-102 transition-transform duration-500 will-change-transform" />
         </div>
       </div>
 
