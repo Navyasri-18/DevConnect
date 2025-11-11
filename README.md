@@ -13,17 +13,17 @@
 
 ## 🖼️ Screenshots
 
-### 🏠 Home Page
+### Home Page
 ![Home Page Screenshot](/assets/HomePage.png)
 
-### 💬 Dashboard Page
-![Chat Screenshot](assets/screenshots/DashboardPage.png)
+### Dashboard Page
+![Chat Screenshot](/assets/DashboardPage.png)
 
-### 👩‍💻 Problems Page
-![Profile Screenshot](assets/screenshots/ProblemsPage.png)
+### Problems Page
+![Profile Screenshot](/assets/ProblemsPage.png)
 
-### 👩‍💻 Session Page
-![Profile Screenshot](assets/screenshots/SessionPage.png)
+### Session Page
+![Profile Screenshot](/assets/SessionPage.png)
 
 
 ---
