@@ -6,7 +6,7 @@
 
 ## 🌐 Live Demo
 
-👉 **[Visit DevConnect Live](https://navyasri-18.github.io/DevConnect)**  
+👉 **[Visit DevConnect Live](https://devconnect-ee23c.sevalla.app/)**  
 *(If unavailable, please check the setup section to run locally.)*
 
 ---
@@ -14,7 +14,7 @@
 ## 🖼️ Screenshots
 
 ### 🏠 Home Page
-![Home Page Screenshot](assets/screenshots/HomePage.png)
+![Home Page Screenshot](/assets/HomePage.png)
 
 ### 💬 Dashboard Page
 ![Chat Screenshot](assets/screenshots/DashboardPage.png)
