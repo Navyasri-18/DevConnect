@@ -35,7 +35,7 @@ function ProblemDescription({ problem, currentProblemId, onProblemChange, allPro
             Description
           </h2>
           <div className="space-y-3 text-base leading-relaxed">
-            <p className="text-base-content/90">{problem.description.test}</p>
+            <p className="text-base-content/90">{problem.description.text}</p>
             {problem.description.notes.map((note, idx) => (
               <p key={idx} className="text-base-content/90">
                 {note}

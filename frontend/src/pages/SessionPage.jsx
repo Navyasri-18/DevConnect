@@ -49,7 +49,7 @@ function SessionPage() {
     useEffect(() => {
         if (!session || loadingSession) return;
 
-        if (session.status === "completed") navigate("dashboard");
+        if (session.status === "completed") navigate("/dashboard");
     }, [session, loadingSession, navigate]);
 
     //update code when problem loads or changes
