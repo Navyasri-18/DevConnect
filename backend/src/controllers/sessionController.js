@@ -78,12 +78,26 @@ export async function getMyRecentSessions(req, res) {
 export async function getSessionById(req, res) {
     try {
         const { id } = req.params;
+        const userId = req.user._id;
 
         const session = await Session.findById(id)
             .populate("host", "name email profileImage clerkId")
             .populate("participant", "name email profileImage clerkId");
 
         if (!session) return res.status(404).json({ message: "Session not found" });
+
+        // Active sessions are listed publicly via getActiveSessions, so reading
+        // one by id is fine for any authenticated user. Completed sessions are
+        // private — only the host or participant should be able to read them
+        // (matching the scoping in getMyRecentSessions). Without this check any
+        // authenticated user could read another user's completed interview
+        // history, including the host/participant PII, by guessing :id values.
+        const isHost = session.host && session.host._id.toString() === userId.toString();
+        const isParticipant =
+            session.participant && session.participant._id.toString() === userId.toString();
+        if (session.status !== "active" && !isHost && !isParticipant) {
+            return res.status(403).json({ message: "Access denied" });
+        }
 
         res.status(200).json({ session });
     } catch (error) {
